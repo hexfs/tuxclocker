@@ -21,7 +21,8 @@
 # You should have received a copy of the GNU General Public License
 # along with TuxClocker.  If not, see <https://www.gnu.org/licenses/>.
 
-QT       += core gui
+QT       += core
+QT       += gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
