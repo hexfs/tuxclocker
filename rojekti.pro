@@ -23,8 +23,11 @@
 
 QT       += core
 QT       += gui
+QT       += widgets
+QT       += printsupport
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
+
+greaterThan(QT_MAJOR_VERSION, 5)
 
 TARGET = tuxclocker
 TEMPLATE = app
