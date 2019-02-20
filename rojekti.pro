@@ -44,27 +44,27 @@ CONFIG (release, debug|release) {
            DEFINES += QT_NO_DEBUG_OUTPUT
        }
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
-    qcustomplot.cpp \
-    editprofile.cpp \
-    newprofile.cpp \
-    plotwidget.cpp \
-    nvidia.cpp
+        src/base/main.cpp \
+        src/gui/mainwindow.cpp \
+        src/gui/qcustomplot.cpp \
+        src/gui/settings/editprofile.cpp \
+        src/gui/settings/newprofile.cpp \
+        src/gui/plotwidget.cpp \
+        src/base/nvidia/nvidia.cpp
 
 HEADERS += \
-        mainwindow.h \
-    qcustomplot.h \
-    editprofile.h \
-    newprofile.h \
-    plotwidget.h \
-    nvidia.h \
-    nvml.h
+        src/gui/mainwindow.h \
+        src/gui/qcustomplot.h \
+        src/gui/settings/editprofile.h \
+        src/gui/settings/newprofile.h \
+        src/gui/plotwidget.h \
+        src/base/nvidia/nvidia.h \
+        src/base/nvidia/nvml.h
 
 FORMS += \
-        mainwindow.ui \
-    editprofile.ui \
-    newprofile.ui
+        src/gui/mainwindow.ui \
+        src/gui/settings/editprofile.ui \
+        src/gui/settings/newprofile.ui
 
 INCLUDEPATH += "/usr/lib"
 INCLUDEPATH += $$(INCLUDEPATH)
@@ -77,4 +77,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    resources.qrc
+    src/resources.qrc
