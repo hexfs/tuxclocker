@@ -43,28 +43,11 @@ CONFIG += c++11
 CONFIG (release, debug|release) {
            DEFINES += QT_NO_DEBUG_OUTPUT
        }
-SOURCES += \
-        src/base/main.cpp \
-        src/gui/mainwindow.cpp \
-        src/gui/qcustomplot.cpp \
-        src/gui/settings/editprofile.cpp \
-        src/gui/settings/newprofile.cpp \
-        src/gui/plotwidget.cpp \
-        src/base/nvidia/nvidia.cpp
 
-HEADERS += \
-        src/gui/mainwindow.h \
-        src/gui/qcustomplot.h \
-        src/gui/settings/editprofile.h \
-        src/gui/settings/newprofile.h \
-        src/gui/plotwidget.h \
-        src/base/nvidia/nvidia.h \
-        src/base/nvidia/nvml.h
+INCLUDEPATH += src
 
-FORMS += \
-        src/gui/mainwindow.ui \
-        src/gui/settings/editprofile.ui \
-        src/gui/settings/newprofile.ui
+include(src/gui/gui.pri)
+include(src/base/base.pri)
 
 INCLUDEPATH += "/usr/lib"
 INCLUDEPATH += $$(INCLUDEPATH)
